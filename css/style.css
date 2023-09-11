@@ -1,0 +1,74 @@
+#wrap {
+  width: 100%;
+}
+#wrap > header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+}
+#wrap > header > div.renewal {
+  background-color: #000;
+}
+#wrap > header > div.renewal > a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+}
+#wrap > header > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: 100px;
+  margin: 0 auto;
+}
+#wrap > header > nav > h1 {
+  width: 78px;
+  height: 78px;
+  text-indent: -9999px;
+  background-image: url(./../images/logo.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#wrap > header > nav > ul {
+  display: flex;
+}
+#wrap > header > nav > ul > li {
+  margin-right: 25px;
+  font-size: 16px;
+}
+#wrap > header > nav > ul > li:last-child {
+  margin: 0;
+}
+#wrap > header > nav > .addmin {
+  display: flex;
+}
+#wrap > header > nav > .addmin > p {
+  margin-right: 10px;
+}
+#wrap > header > nav > .addmin > p:last-child {
+  margin: 0;
+}
+#wrap > header > nav > .addmin > p:last-child {
+  margin: 0;
+}
+#wrap > section {
+  margin-top: 150px;
+}
+#wrap > section > .main-banner {
+  width: 100%;
+  text-indent: -9999px;
+  background-image: url(./../images/main-banner.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#wrap > section > .main-banner > a {
+  display: block;
+  width: 100%;
+  height: 923px;
+}/*# sourceMappingURL=style.css.map */

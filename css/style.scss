@@ -1,0 +1,81 @@
+@charset "utf-8";
+$pri-color-1: #222;
+#wrap {
+	width: 100%;
+	> header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background-color: #fff;
+		> div.renewal {
+			background-color: $pri-color-2;
+			> a {
+				display: block;
+				height: 50px;
+				line-height: 50px;
+				color: #fff;
+				text-align: center;
+			}
+		} //.renewal
+		> nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 70%;
+			height: 100px;
+			margin: 0 auto;
+
+			> h1 {
+				width: 78px;
+				height: 78px;
+				text-indent: -9999px;
+				background-image: url(./../images/logo.png);
+				background-position: center center;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			> ul {
+				display: flex;
+
+				> li {
+					margin-right: 25px;
+					font-size: 16px;
+
+					&:last-child {
+						margin: 0;
+					}
+				} //li
+			} //ul
+			> .addmin {
+				display: flex;
+				> p {
+					margin-right: 10px;
+					&:last-child {
+						margin: 0;
+					}
+					&:last-child {
+						margin: 0;
+					}
+				} //p
+			} //addmin
+		} //nav
+	} // header
+	> section {
+		margin-top: 150px;
+		> .main-banner {
+			width: 100%;
+			text-indent: -9999px;
+			background-image: url(./../images/main-banner.png);
+			background-position: center center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			> a {
+				display: block;
+				width: 100%;
+				height: 923px;
+			}
+		}
+	} //section
+	> footer {
+	} //footer
+}
