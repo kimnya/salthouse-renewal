@@ -8,7 +8,7 @@
   background-color: #fff;
 }
 #wrap > header > div.renewal {
-  background-color: #000;
+  background-color: #222;
 }
 #wrap > header > div.renewal > a {
   display: block;
@@ -17,13 +17,24 @@
   color: #fff;
   text-align: center;
 }
+@media screen and (max-width: 640px) {
+  #wrap > header > div.renewal > a {
+    display: none;
+  }
+}
 #wrap > header > nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 70%;
-  height: 100px;
+  max-height: 100px;
   margin: 0 auto;
+}
+@media screen and (max-width: 640px) {
+  #wrap > header > nav {
+    width: 100%;
+    height: 50px;
+  }
 }
 #wrap > header > nav > h1 {
   width: 78px;
@@ -34,8 +45,23 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 640px) {
+  #wrap > header > nav > h1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 50%;
+    background-image: url(./../images/logo2.jpg);
+    transform: translate(0, -50%);
+  }
+}
 #wrap > header > nav > ul {
   display: flex;
+}
+@media screen and (max-width: 640px) {
+  #wrap > header > nav > ul {
+    display: none;
+  }
 }
 #wrap > header > nav > ul > li {
   margin-right: 25px;
@@ -47,28 +73,197 @@
 #wrap > header > nav > .addmin {
   display: flex;
 }
+@media screen and (max-width: 640px) {
+  #wrap > header > nav > .addmin {
+    display: none;
+  }
+}
 #wrap > header > nav > .addmin > p {
   margin-right: 10px;
 }
 #wrap > header > nav > .addmin > p:last-child {
   margin: 0;
 }
-#wrap > header > nav > .addmin > p:last-child {
-  margin: 0;
-}
 #wrap > section {
-  margin-top: 150px;
+  margin-top: 120px;
+}
+@media screen and (max-width: 640px) {
+  #wrap > section {
+    width: 100%;
+    margin-top: 50px;
+  }
 }
 #wrap > section > .main-banner {
   width: 100%;
   text-indent: -9999px;
-  background-image: url(./../images/main-banner.png);
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 #wrap > section > .main-banner > a {
   display: block;
   width: 100%;
   height: 923px;
+  background-image: url(./../images/main-banner.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 640px) {
+  #wrap > section > .main-banner > a {
+    width: 100%;
+    height: 278px;
+  }
+}
+@media screen and (max-width: 640px) {
+  #wrap > section > .product-guide {
+    width: 100%;
+  }
+}
+#wrap > section > .product-guide > .product-guide-txt {
+  margin: 150px 0 70px;
+  text-align: center;
+}
+@media screen and (max-width: 640px) {
+  #wrap > section > .product-guide > .product-guide-txt {
+    -moz-text-align-last: left;
+         text-align-last: left;
+    margin: 20px;
+  }
+}
+#wrap > section > .product-guide > .product-guide-txt > h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 640px) {
+  #wrap > section > .product-guide > .product-guide-txt > h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+#wrap > section > .product-guide > .product-guide-txt > p {
+  font-size: 15px;
+}
+@media screen and (max-width: 640px) {
+  #wrap > section > .product-guide > .product-guide-txt > p {
+    font-size: 12px;
+  }
+}
+#wrap > section > .product-guide > .product-guide-Kategorie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 640px) {
+  #wrap > section > .product-guide > .product-guide-Kategorie {
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+  }
+}
+#wrap > section > .product-guide > .product-guide-Kategorie > li {
+  width: 220px;
+  font-size: 14px;
+  text-align: center;
+}
+@media screen and (max-width: 640px) {
+  #wrap > section > .product-guide > .product-guide-Kategorie > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+#wrap > section > .product-guide > .product-guide-Kategorie > li > a {
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 10px;
+  text-indent: -9999px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #333;
+  border-radius: 50%;
+}
+@media screen and (max-width: 640px) {
+  #wrap > section > .product-guide > .product-guide-Kategorie > li > a {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0;
+  }
+}
+#wrap > section > .product-guide > .product-guide-Kategorie > li:nth-child(1) > a {
+  background-image: url(./../images/thumb1.jpg);
+}
+#wrap > section > .product-guide > .product-guide-Kategorie > li:nth-child(2) > a {
+  background-image: url(./../images/thumb2.jpg);
+}
+#wrap > section > .product-guide > .product-guide-Kategorie > li:nth-child(3) > a {
+  background-image: url(./../images/thumb3.jpg);
+  background-position: -25px center;
+}
+#wrap > section > .product-guide > .product-guide-Kategorie > li:nth-child(4) > a {
+  background-image: url(./../images/thumb4.webp);
+}
+#wrap > section > .product-guide > .product-guide-Kategorie > li:nth-child(5) > a {
+  background-image: url(./../images/thumb5.jpg);
+}
+#wrap > section .product-best > .product-best-txt {
+  margin: 150px 0 70px;
+  text-align: center;
+}
+#wrap > section .product-best > .product-best-txt > h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+#wrap > section .product-best > .product-best-txt > .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 28%;
+  margin: 0 auto;
+}
+#wrap > section .product-best > .product-best-txt > .menu > li {
+  width: 70px;
+}
+#wrap > section .product-best > .product-best-txt > .menu > li:nth-child(1) {
+  width: 90px;
+}
+#wrap > section .product-best > .product-best-txt > .menu > li:nth-child(4) {
+  width: 130px;
+}
+#wrap > section .product-best > .product-best-txt > .menu > li > a {
+  display: block;
+  height: 50px;
+  color: #999;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 8px;
+}
+#wrap > section .product-best > .menu-item {
+  display: flex;
+}
+#wrap > section .product-best > .menu-item li > a {
+  display: block;
+  width: 240px;
+  height: 300px;
+  border: 1px solid #000;
+}
+#wrap > section .product-best > .menu-item li > a > img {
+  display: block;
+  width: 120px;
+  height: 240px;
+  transition: all 0.3s;
+}
+> #wrap > section .product-best > .menu-item li > a:hover > img {
+  width: 150px;
+  height: 260px;
+}
+#wrap > footer {
+  height: 60px;
+  background-color: #222;
 }/*# sourceMappingURL=style.css.map */
