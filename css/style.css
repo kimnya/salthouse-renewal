@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
   background-color: #fff;
 }
 #wrap > header > div.renewal {
@@ -208,9 +209,6 @@
 #wrap > section > .product-guide > .product-guide-Kategorie > li:nth-child(5) > a {
   background-image: url(./../images/thumb5.jpg);
 }
-#wrap > section .product-best {
-  position: relative;
-}
 #wrap > section .product-best > .product-best-txt {
   margin: 150px 0 70px;
   text-align: center;
@@ -275,10 +273,8 @@
 #wrap > section .product-best > .menu-item {
   display: none;
   justify-content: center;
-  position: absolute;
   left: 50%;
   top: 160%;
-  transform: translate(-50%, 0);
 }
 #wrap > section .product-best > .menu-item:nth-of-type(5) {
   display: flex;
@@ -321,18 +317,34 @@
 #wrap > section > .story {
   display: flex;
   flex: 1 1 0;
-  position: absolute;
-  left: 50%;
-  top: 2500px;
   width: 100%;
   height: 700px;
-  transform: translate(-50%, 0);
+  margin-top: 90px;
+}
+#wrap > section > .story.recipe {
+  margin-top: 500px;
+}
+#wrap > section > .story.recipe .story-banner {
+  order: 200;
+  background-image: url(./../images/recipe.png);
+}
+#wrap > section > .story.address {
+  margin: 300px 0 150px;
+}
+#wrap > section > .story.address .story-banner {
+  background-image: url(./../images/address.png);
+}
+#wrap > section > .story.address h2 {
+  line-height: 1.6;
 }
 #wrap > section > .story > .story-banner {
   width: 950px;
   height: 700px;
   text-indent: -9999px;
   background-color: #333;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-image: url(./../images/storyBanner.png);
 }
 #wrap > section > .story > .story-start {
@@ -366,6 +378,7 @@
   border-radius: 10px;
 }
 #wrap > section > .sale {
+  position: relative;
   margin: 150px 0 70px;
   text-align: center;
 }
@@ -385,8 +398,30 @@
     font-size: 16px;
   }
 }
+#wrap > section > .second-banner {
+  position: absolute;
+  left: 0;
+  top: 500;
+  width: 100%;
+  height: 305px;
+  background-image: url(./../images/secondBanner.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#wrap > section > .fixed {
+  font-size: 45px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 500;
+  width: 100%;
+  height: 305px;
+  line-height: 305px;
+  color: #fff;
+}
 #wrap > footer {
-  display: none;
   height: 60px;
   background-color: #222;
 }/*# sourceMappingURL=style.css.map */
