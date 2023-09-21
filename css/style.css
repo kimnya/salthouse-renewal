@@ -124,6 +124,7 @@
   color: #fcfbfb;
   background-color: #2e0505;
   border-radius: 50px;
+  border: 1px solid #000;
 }
 #wrap > header > nav > .hambugerMenu .shop > .shopMenu > p:last-child {
   border: none;
