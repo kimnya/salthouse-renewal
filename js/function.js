@@ -73,8 +73,29 @@ $(function () {
   });
 });
 
-// scrollTop
+// scroll
 $(function () {
+  const $renewal = $(".renewal a");
+  $(window).scroll(function () {
+    scrollTop = $(document).scrollTop();
+    console.log($(document).scrollTop());
+    if (scrollTop > 50) {
+      $renewal.stop().animate(
+        {
+          height: 0,
+        },
+        200
+      );
+    } else {
+      $renewal.stop().animate(
+        {
+          height: "50px",
+        },
+        100
+      );
+    }
+  });
+
   const $top = $(".top>a");
   $top.on("click", function (evt) {
     evt.preventDefault();
@@ -85,19 +106,42 @@ $(function () {
 //hambuger menu
 $(function () {
   const $hambuger = $("nav>p>a");
-  const $gnb = $(".gnb");
+  const $gnb = $(".hambugerMenu");
+  const $light = $(".light");
+  const $tabMenu = $(".gnb_hambuger>li");
 
   $hambuger.on("click", function (evt) {
     evt.preventDefault();
-    $gnb.stop().css({ display: "flex" }, 300);
+    $gnb.addClass("on");
+    $light.addClass("on");
+  });
+  $(window).on("resize", function () {
+    $gnb.removeClass("on");
+    $light.removeClass("on");
+  });
+  $light.on("click", function () {
+    $gnb.removeClass("on");
+    $light.removeClass("on");
+    $tabMenu.first().children("a").text("카테고리");
   });
 });
 
-//hamburgermenu
+//메뉴체크
 $(function () {
-  const $shopOn = $(".shopMenu>p>a");
-  $shopOn.on("click", function (evt) {
+  const $shopOn = $(".shopMenu");
+  const $tabMenu = $(".gnb_hambuger>li");
+  $shopOn.children().on("click", function (evt) {
     evt.preventDefault();
-    $(this).parent().addClass("on").siblings().removeClass("on");
+    if ($(this).index() === 1) {
+      $tabMenu.first().children("a").text("소금집델리");
+      $(this).addClass("on").siblings().removeClass("on");
+    } else {
+      $tabMenu.first().children("a").text("카테고리");
+      $(this).addClass("on").siblings().removeClass("on");
+    }
+  });
+
+  $tabMenu.on("click", function () {
+    $(this).toggleClass("on").children("i").toggleClass("fa-solid fa-angle-up");
   });
 });

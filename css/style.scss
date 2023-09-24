@@ -1,6 +1,7 @@
 @charset "utf-8";
 $pri-color-1: #0e0e0e;
-$font-color-1: #777;
+$point-color-1: #777;
+$point-color-2: #110808;
 $mobail: "screen and (max-width: 550px)";
 $tablet: "screen and (max-width: 640px)";
 $pc: " screen and (max-width: 992px)";
@@ -39,13 +40,186 @@ $wide: " screen and (max-width: 1200px)";
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 70%;
+      width: 80%;
       max-height: 100px;
       margin: 0 auto;
-
+      > .hambugerMenu {
+        display: none;
+      } //.hambugerMenu
+      > .light {
+        text-indent: -9999px;
+      }
       @media #{$tablet} {
         width: 100%;
         height: 50px;
+        > .light {
+          display: none;
+          position: fixed;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background-color: lighten(#000000, 10%);
+          opacity: 90%;
+          text-indent: -9999px;
+          &.on {
+            display: block;
+          }
+        } //.light
+        > .hambugerMenu {
+          display: none;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 80%;
+          height: 100vh;
+          border: 1px solid #000;
+          background-color: #f4f4f4;
+
+          &.on {
+            display: block;
+          }
+          > p {
+            color: $point-color-1;
+            margin: 20px;
+            > span {
+              &:after {
+                content: "│";
+              }
+              &:last-child:after {
+                content: "";
+              }
+            }
+          } //p
+
+          .shop {
+            width: 80%;
+            height: 26px;
+            margin: 20px 20px 40px;
+            border: 1px solid #000;
+            border-radius: 50px;
+
+            > .shopMenu {
+              height: 100%;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              > p {
+                border: 1px solid #000;
+                width: 50%;
+                height: 100%;
+                line-height: 26px;
+                text-align: center;
+                border-radius: 50px;
+                > a {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                }
+
+                &:first-child {
+                  border: none;
+                }
+                &:last-child {
+                  border: none;
+                }
+                &.on {
+                  background-color: $point-color-2;
+                  > a {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          } //.shop
+          ul {
+            margin-left: 20px;
+
+            > li {
+              display: flex;
+              justify-content: space-between;
+              position: relative;
+              width: 90%;
+              height: 20px;
+              margin-bottom: 10px;
+              font-size: 14px;
+              .saltHouse {
+                display: none;
+              }
+              > a {
+                color: $point-color-2;
+              }
+              > ol {
+                > li {
+                  font-size: 12px;
+                  > a {
+                    color: $point-color-1;
+                  }
+                } //li
+              } //ol
+
+              &:nth-child(1) {
+                &.on {
+                  height: 140px;
+                }
+                &.on > ol {
+                  display: block;
+                }
+                > ol {
+                  display: none;
+                  position: absolute;
+                  left: 10px;
+                  top: 20px;
+                  width: 80px;
+                  > li {
+                    margin-bottom: 5px;
+                    &:last-child {
+                      margin: 0;
+                    }
+                  } //li
+                } //ol
+              } //li-nth(1)
+              &:nth-child(4) {
+                color: #000;
+
+                &.on {
+                  height: 52px;
+                }
+                &.on > ol {
+                  display: block;
+                }
+                > ol {
+                  display: none;
+                  position: absolute;
+                  left: 10px;
+                  top: 20px;
+                  width: 80px;
+                  > li {
+                    margin-bottom: 5px;
+                  } //li
+                } //ol
+              } //li-nth(4)
+              &:nth-child(5) {
+                &.on {
+                  height: 116px;
+                }
+                &.on > ol {
+                  display: block;
+                }
+                > ol {
+                  display: none;
+                  position: absolute;
+                  left: 10px;
+                  top: 20px;
+                  width: 90px;
+                  > li {
+                    margin-bottom: 5px;
+                  } //li
+                } //ol
+              } //li-nth(4)
+            } //li
+          } //ul
+        } //.hambugerMenu
       }
 
       > h1 {
@@ -82,115 +256,12 @@ $wide: " screen and (max-width: 1200px)";
           transform: translate(0, -50%);
         }
       } //p
-      > .light {
-        display: none;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-color: lighten(#000000, 10%);
-        opacity: 90%;
-        text-indent: -9999px;
-      }
-      > .hambugerMenu {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 80%;
-        height: 50vh;
-        border: 1px solid #000;
-        background-color: #f4f4f4;
-        > p {
-          > span {
-            &:after {
-              content: "│";
-            }
-            &:last-child:after {
-              content: "";
-            }
-          }
-        } //p
 
-        .shop {
-          width: 80%;
-          height: 26px;
-          margin: 0 auto;
-          border: 1px solid #000;
-          border-radius: 50px;
-
-          > .shopMenu {
-            height: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            > p {
-              border: 1px solid #000;
-              width: 50%;
-              height: 100%;
-              line-height: 26px;
-              text-align: center;
-              border-radius: 50px;
-              > a {
-                display: block;
-                width: 100%;
-                height: 100%;
-              }
-
-              &:first-child {
-                border: none;
-              }
-              &:last-child {
-                border: none;
-              }
-              &.on {
-                background-color: #2e0505;
-                > a {
-                  color: #fff;
-                }
-              }
-            }
-          }
-        } //.shop
-        ul {
-          li {
-            width: 90%;
-            // justify-content: space-between;
-            display: flex;
-            margin: 0 auto 10px;
-
-            &:nth-child(1) {
-              > a {
-                > ol {
-                  // align-self: flex-start;
-                  border: 1px solid #000;
-                  > li {
-                    > a {
-                    }
-                  }
-                }
-              }
-            }
-          } //li
-        } //ul
-      } //.hambugerMenu
       > .gnb {
         display: flex;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
+        width: 100%;
         @media #{$tablet} {
           display: none;
-          // display: block;
-          flex-direction: column;
-          background-color: #f4f4f4;
-          position: absolute;
-          left: 50%;
-          top: 50px;
-          width: 80%;
-          height: 100vh;
-          border: 1px solid #000;
-          // transform: translate(-50%, 0)
         }
 
         > li {
@@ -199,7 +270,10 @@ $wide: " screen and (max-width: 1200px)";
           margin-right: 25px;
           font-size: 16px;
           text-align: center;
-          @media #{$tablet} {
+
+          &:hover > .lnb {
+            display: block;
+            top: 48px;
           }
 
           &:last-child {
@@ -209,13 +283,8 @@ $wide: " screen and (max-width: 1200px)";
           > a {
             display: block;
             width: 100%;
-            height: 40px;
+            height: 60px;
             line-height: 40px;
-          }
-
-          &:hover > .lnb {
-            display: block;
-            top: 48px;
           }
 
           > .lnb {
@@ -244,15 +313,18 @@ $wide: " screen and (max-width: 1200px)";
         } //li
       } //.gnb
       > .addmin {
+        width: 300px;
         display: flex;
-        position: absolute;
-        right: 2%;
-        transform: translate(-50%, 0);
+
+        // position: absolute;
+        // right: 2%;
+        // transform: translate(-50%, 0);
         @media #{$tablet} {
           display: none;
         }
 
         > p {
+          width: 60px;
           margin-right: 10px;
 
           &:last-child {
@@ -263,16 +335,15 @@ $wide: " screen and (max-width: 1200px)";
     } //nav
   } // header
   > section {
-    margin-top: 120px;
+    margin-top: 88px;
     @media #{$tablet} {
       width: 100%;
-      margin-top: 28px;
+      margin-top: 18px;
     }
 
     > .main-banner {
       width: 100%;
       text-indent: -9999px;
-
       > a {
         display: block;
         width: 100%;
@@ -288,11 +359,18 @@ $wide: " screen and (max-width: 1200px)";
       } //a
     } //.main-banner
     > .product-guide {
+      height: 300px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: column nowrap;
+
       @media #{$tablet} {
         width: 100%;
       }
       > .product-guide-txt {
-        margin: 150px 0 70px;
+        // margin: 150px 0 70px;
         text-align: center;
 
         @media #{$tablet} {
@@ -319,17 +397,20 @@ $wide: " screen and (max-width: 1200px)";
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        width: 60%;
+        width: 1200px;
         margin: 0 auto;
 
         @media #{$tablet} {
           flex-flow: row wrap;
-          width: 100%;
+          width: 70%;
+        }
+        @media #{$mobail} {
+          flex-flow: row wrap;
+          width: 90%;
         }
 
         > li {
-          width: 220px;
+          width: 200px;
           font-size: 14px;
           text-align: center;
 
@@ -339,10 +420,19 @@ $wide: " screen and (max-width: 1200px)";
             &:last-child {
               align-items: center;
             }
+            @media #{$mobail} {
+              width: 150px;
+              margin-bottom: 20px;
+              text-align: center;
+              &:last-child {
+                align-items: center;
+              }
+            }
           }
 
           > a {
             display: block;
+
             width: 180px;
             height: 180px;
             margin: 0 auto 10px;
@@ -394,33 +484,37 @@ $wide: " screen and (max-width: 1200px)";
         margin: 150px 0 70px;
         text-align: center;
         @media #{$tablet} {
-          position: relative;
-          margin: 100px 0;
+          margin: 500px 0 70px;
         }
 
         > h2 {
           font-size: 24px;
-          margin-bottom: 30px;
+          margin-bottom: 20px;
+        }
+        > p {
+          margin-bottom: 20px;
         }
 
         > .menu {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          width: 28%;
+          width: 500px;
           margin: 0 auto;
+
           @media #{$tablet} {
             flex-flow: row wrap;
+            width: 60%;
 
-            width: 80%;
             height: 140px;
-
-            // position: absolute;
-            // left: ;
-            // top: 150%;
-
-            // transform: translate(-50% -50%);
           }
+          @media #{$mobail} {
+            flex-flow: row wrap;
+            width: 90%;
+
+            height: 140px;
+          }
+
           > li {
             width: 70px;
 
@@ -432,25 +526,10 @@ $wide: " screen and (max-width: 1200px)";
 
             @media #{$tablet} {
               width: 90px;
-              &:hover > a,
-              &.on > a {
-                color: #999;
-                background-color: #eee;
-              }
             }
-
-            // &:nth-child(1) {
-            //   display: block;
-            //   width: 90px;
-            // }
-            // &:nth-child(2) {
-            //   //   display: block;
-            //   width: 90px;
-            // }
-            // &:nth-child(3) {
-            //   //   display: block;
-            //   width: 90px;
-            // }
+            @media #{$mobail} {
+              width: 90px;
+            }
 
             &:nth-child(4) {
               // display: block;
@@ -471,6 +550,9 @@ $wide: " screen and (max-width: 1200px)";
               @media #{$tablet} {
                 width: 100px;
               }
+              @media #{$mobail} {
+                width: 100px;
+              }
             } //a
           } //li
         } //.menu
@@ -480,8 +562,18 @@ $wide: " screen and (max-width: 1200px)";
         justify-content: space-between;
         width: 70%;
         margin: 0 auto;
+        &.set {
+          span {
+            color: #ff0000;
+          }
+        }
 
         @media #{$tablet} {
+          flex-flow: row wrap;
+          justify-content: center;
+          width: 100%;
+        }
+        @media #{$mobail} {
           flex-flow: row wrap;
           justify-content: center;
           width: 100%;
@@ -503,23 +595,31 @@ $wide: " screen and (max-width: 1200px)";
           // display: flex;
         }
         li {
+          width: 40%;
+
           > a {
             display: block;
-            width: 240px;
+            width: 75%;
+            @media #{$tablet} {
+              width: 100%;
+            }
+            @media #{$mobail} {
+              width: 100%;
+            }
 
             &:hover > .picture > img {
               transform: scale(1.1);
             }
 
             > .picture {
-              width: 250px;
-              height: 310px;
+              width: 100%;
+
               overflow: hidden;
 
               > img {
                 display: block;
                 width: 150px;
-                height: 240px;
+                height: 200px;
 
                 margin: 30px auto 0;
                 transition: all 0.3s;
@@ -531,10 +631,13 @@ $wide: " screen and (max-width: 1200px)";
                 &:nth-child(1) {
                   font-size: 14px;
                 }
-                &:nth-child(2),
-                &:nth-child(3) {
+                &:nth-child(2) {
                   font-size: 18px;
-                  font-weight: bold;
+                  font-weight: 600;
+                }
+                &:nth-child(3) {
+                  font-size: 16px;
+                  font-weight: 800;
                 }
               }
               @media #{$tablet} {
@@ -706,8 +809,8 @@ $wide: " screen and (max-width: 1200px)";
       width: 70%;
       margin: 0 auto;
       padding-bottom: 40px;
-      color: $font-color-1;
-      border-bottom: 1px solid $font-color-1;
+      color: $point-color-1;
+      border-bottom: 1px solid $point-color-1;
       @media #{$tablet} {
         display: block;
         width: 90%;
@@ -741,7 +844,7 @@ $wide: " screen and (max-width: 1200px)";
             line-height: 20px;
             font-size: 11px;
             text-align: center;
-            border: 1px solid $font-color-1;
+            border: 1px solid $point-color-1;
             border-radius: 5px;
             @media #{$tablet} {
               align-self: self-start;
@@ -774,7 +877,7 @@ $wide: " screen and (max-width: 1200px)";
           height: 60%;
           font-size: 13px;
           text-align: center;
-          border-left: 1px solid $font-color-1;
+          border-left: 1px solid $point-color-1;
 
           @media #{$tablet} {
             margin-top: 20px;
@@ -811,8 +914,8 @@ $wide: " screen and (max-width: 1200px)";
         height: 40px;
         line-height: 40px;
         text-align: center;
-        color: $font-color-1;
-        border-right: 1px solid $font-color-1;
+        color: $point-color-1;
+        border-right: 1px solid $point-color-1;
         &:nth-child(1) {
           width: 140px;
           color: #fff;
@@ -830,7 +933,7 @@ $wide: " screen and (max-width: 1200px)";
       top: 60%;
       width: 50px;
       @media #{$tablet} {
-        right: 30px;
+        right: 0;
         top: 740px;
       }
 
@@ -839,11 +942,11 @@ $wide: " screen and (max-width: 1200px)";
         width: 100%;
         height: 50px;
         line-height: 50px;
-        color: $font-color-1;
+        color: $point-color-1;
         font-size: 38px;
         font-weight: 200;
         text-align: center;
-        border: 1px solid $font-color-1;
+        border: 1px solid $point-color-1;
         border-radius: 50%;
         @media #{$tablet} {
           width: 50%;
