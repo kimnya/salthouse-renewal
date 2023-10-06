@@ -259,7 +259,7 @@ $tablet: 'screen and (max-width: 640px)';
 				display: flex;
 				position: absolute;
 				left: 50%;
-				transform: translate(-60%, 0);
+				transform: translate(-50%, 0);
 				@media #{$tablet} {
 					display: none;
 				}
@@ -406,10 +406,6 @@ $tablet: 'screen and (max-width: 640px)';
 					flex-flow: row wrap;
 					width: 70%;
 				}
-				@media #{$mobail} {
-					flex-flow: row wrap;
-					width: 90%;
-				}
 
 				> li {
 					width: 200px;
@@ -421,14 +417,6 @@ $tablet: 'screen and (max-width: 640px)';
 						text-align: center;
 						&:last-child {
 							align-items: center;
-						}
-						@media #{$mobail} {
-							width: 150px;
-							margin-bottom: 20px;
-							text-align: center;
-							&:last-child {
-								align-items: center;
-							}
 						}
 					}
 
@@ -510,13 +498,6 @@ $tablet: 'screen and (max-width: 640px)';
 
 						height: 140px;
 					}
-					@media #{$mobail} {
-						flex-flow: row wrap;
-						justify-content: center;
-						width: 90%;
-
-						height: 140px;
-					}
 
 					> li {
 						width: 70px;
@@ -528,9 +509,6 @@ $tablet: 'screen and (max-width: 640px)';
 						}
 
 						@media #{$tablet} {
-							width: 90px;
-						}
-						@media #{$mobail} {
 							width: 90px;
 						}
 
@@ -553,9 +531,6 @@ $tablet: 'screen and (max-width: 640px)';
 							@media #{$tablet} {
 								width: 100px;
 							}
-							@media #{$mobail} {
-								width: 100px;
-							}
 						} //a
 					} //li
 				} //.menu
@@ -572,11 +547,6 @@ $tablet: 'screen and (max-width: 640px)';
 				}
 
 				@media #{$tablet} {
-					flex-flow: row wrap;
-					justify-content: center;
-					width: 100%;
-				}
-				@media #{$mobail} {
 					flex-flow: row wrap;
 					justify-content: center;
 					width: 100%;
@@ -604,9 +574,6 @@ $tablet: 'screen and (max-width: 640px)';
 						display: block;
 						width: 75%;
 						@media #{$tablet} {
-							width: 100%;
-						}
-						@media #{$mobail} {
 							width: 100%;
 						}
 
