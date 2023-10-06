@@ -75,17 +75,18 @@ $(function () {
 
 // scroll
 $(function () {
-	const $renewal = $('.renewal a');
+	const $renewal = $('.renewal');
+
 	$(window).scroll(function () {
-		whith = $(document).whith();
+		width = $('body').innerWidth();
 		scrollTop = $(document).scrollTop();
 		console.log($(document).scrollTop());
-		if (scrollTop > 50 || whith < 650) {
+		if (scrollTop > 50 || width < 650) {
 			$renewal.stop().animate(
 				{
 					height: 0,
 				},
-				200
+				100
 			);
 		} else {
 			$renewal.stop().animate(
