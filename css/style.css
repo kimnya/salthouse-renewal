@@ -28,7 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 90%;
   max-height: 100px;
   margin: 0 auto;
 }
@@ -237,7 +237,9 @@
 }
 #wrap > header > nav > .gnb {
   display: flex;
-  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-60%, 0);
 }
 @media screen and (max-width: 640px) {
   #wrap > header > nav > .gnb {
@@ -245,9 +247,10 @@
   }
 }
 #wrap > header > nav > .gnb > li {
+  display: flex;
+  justify-content: space-between;
   position: relative;
-  width: 120px;
-  margin-right: 25px;
+  width: 140px;
   font-size: 16px;
   text-align: center;
 }
@@ -262,14 +265,14 @@
   display: block;
   width: 100%;
   height: 60px;
-  line-height: 40px;
+  line-height: 60px;
 }
 #wrap > header > nav > .gnb > li > .lnb {
   display: none;
   position: absolute;
   left: 50%;
   top: 0;
-  width: 140px;
+  width: 100%;
   font-size: 15px;
   background-color: #fff;
   border-radius: 0 0 20px 20px;
@@ -480,6 +483,7 @@
 @media screen and (max-width: 550px) {
   #wrap > section .product-best > .product-best-txt > .menu {
     flex-flow: row wrap;
+    justify-content: center;
     width: 90%;
     height: 140px;
   }
@@ -894,7 +898,7 @@
 @media screen and (max-width: 640px) {
   #wrap > footer > .top {
     right: 0;
-    top: 740px;
+    top: 720px;
   }
 }
 #wrap > footer > .top > a {
