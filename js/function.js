@@ -10,7 +10,7 @@ $(function () {
     evt.preventDefault();
     nowIdx = $indicater.index(this);
     $menuItem.css({ display: "none" });
-    $menuItem.eq(nowIdx).stop().fadeIn(200).css({
+    $menuItem.eq(nowIdx).css({
       display: "flex",
     });
     console.log(nowIdx);
