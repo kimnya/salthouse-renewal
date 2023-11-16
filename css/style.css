@@ -379,7 +379,7 @@
 @media screen and (max-width: 640px) {
   #wrap > section > .product-guide > .product-guide-Kategorie {
     flex-flow: row wrap;
-    width: 70%;
+    width: 80%;
   }
 }
 #wrap > section > .product-guide > .product-guide-Kategorie > li {
@@ -458,7 +458,7 @@
 @media screen and (max-width: 640px) {
   #wrap > section .product-best > .product-best-txt > .menu {
     flex-flow: row wrap;
-    width: 60%;
+    width: 80%;
     height: 140px;
   }
 }
@@ -471,7 +471,7 @@
 }
 @media screen and (max-width: 640px) {
   #wrap > section .product-best > .product-best-txt > .menu > li {
-    width: 70px;
+    width: 80px;
   }
 }
 #wrap > section .product-best > .product-best-txt > .menu > li:nth-child(4) {

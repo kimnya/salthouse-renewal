@@ -314,10 +314,6 @@ $tablet: "screen and (max-width: 640px)";
       > .addmin {
         width: 300px;
         display: flex;
-
-        // position: absolute;
-        // right: 2%;
-        // transform: translate(-50%, 0);
         @media #{$tablet} {
           display: none;
         }
@@ -360,7 +356,6 @@ $tablet: "screen and (max-width: 640px)";
     } //.main-banner
     > .product-guide {
       height: 300px;
-
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -402,7 +397,7 @@ $tablet: "screen and (max-width: 640px)";
 
         @media #{$tablet} {
           flex-flow: row wrap;
-          width: 70%;
+          width: 80%;
         }
 
         > li {
@@ -412,9 +407,8 @@ $tablet: "screen and (max-width: 640px)";
 
           @media #{$tablet} {
             width: 150px;
-
             margin-bottom: 20px;
-            // text-align: center;
+
             &:last-child {
               align-items: center;
             }
@@ -495,7 +489,7 @@ $tablet: "screen and (max-width: 640px)";
           @media #{$tablet} {
             flex-flow: row wrap;
 
-            width: 60%;
+            width: 80%;
 
             height: 140px;
           }
@@ -510,7 +504,7 @@ $tablet: "screen and (max-width: 640px)";
             }
 
             @media #{$tablet} {
-              width: 70px;
+              width: 80px;
             }
 
             &:nth-child(4) {
